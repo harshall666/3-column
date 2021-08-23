@@ -1,0 +1,103 @@
+@import '_variables';
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+body{
+    box-sizing: border-box;
+    padding: 0%;
+    margin: 0%;
+    background-color: $VeryLightGray;
+    color: $VeryLightGray;
+    border-radius: 10px 10px 0px 0px;
+    font-size: 15px;
+    font-family:'Lexend Deca', sans-serif;
+    font-weight:400;
+    align-content: center;
+    display: grid;
+    justify-content: center;
+    
+    .card{
+        margin: 20px 0px;
+        width: 375px;
+        line-height: 1.6;
+        
+        .card__items{
+            padding: 75px 70px;
+            height: 330px;
+        }
+    
+        .heading{
+            font-size: 2.5rem;
+            font-family:'Big Shoulders Display', Cursive;
+            text-transform: uppercase;
+        }
+        .para{
+            color: $TransparentWhite;
+        }
+
+        .btn{
+            position: absolute;
+            text-decoration: none;
+            background-color: $VeryLightGray;
+            margin-top: 10px;
+            padding: 13px 30px;
+            border: 2px solid $VeryLightGray;
+            border-radius: 25px;
+        }
+        
+        //card items
+        .sedans{
+            border-radius: 10px 10px 0px 0px;
+            background-color: $BrightOrange;
+            .btn{
+                color: $BrightOrange;
+            }
+        }
+        .suvs{
+            background-color: $DarkCyan;
+            .btn{
+                color: $DarkCyan;
+            }
+        }
+        .luxury{
+            background-color: $VeryDarkCyan;
+            border-radius: 0px 0px 10px 10px;
+            .btn{
+                color: $VeryDarkCyan;
+            }
+        }
+        .btn:hover{
+            background-color: inherit;
+            color: $VeryLightGray !important;
+        }
+
+    }
+    .attribution{
+        color: black;
+        a{
+            text-decoration: none;
+            font-weight: bold;
+        }
+    }
+    @media (min-width:992px) {
+
+        .card{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            width: 992px;
+            margin-top: 100px;
+            .card__items{
+                padding: 75px 60px;
+                height: 375px;
+            }
+            .btn{
+                margin-top: 50px;
+            }
+            .sedans{
+                border-radius:10px 0px 0px 10px;
+            }
+            .luxury{
+                border-radius:0px 10px 10px 0px;
+            }
+        }
+    }
+
+}
